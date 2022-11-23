@@ -1,0 +1,35 @@
+@import '../../style/variables/color'; 
+
+.footer {
+    background-color: #1c0045;
+    &__wrepper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 70px;
+        & > p {
+            margin-left: 80px;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 19px;
+            color: #E0D8FF;
+        }
+    }
+    &__about {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-right: 80px;
+        width: 515px;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+        text-decoration: none;
+        & > a {
+            color: #E0D8FF;
+            &:hover {
+                color: $Bright_Violet;
+            }
+        }
+    }
+}

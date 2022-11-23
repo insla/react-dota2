@@ -1,0 +1,27 @@
+@import '../../style/variables/color';
+
+.teams {
+    background-image:url('../../resources/img/main-img.png');
+    background-color: $Dark_violet;
+    background-position: top -80px right 0;
+    background-repeat: no-repeat;
+}
+
+.table {
+    width: 100%;
+    border: 3px solid $Violet;
+    color: black;
+    &__team-table{
+        span {
+            color: red;
+        }
+    }
+    &__head {
+        background-color: $Violet;
+        border: 3px solid $Violet;
+    }
+    &__body {
+        border: 3px solid $Violet;
+
+    }
+}

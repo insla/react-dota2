@@ -1,0 +1,44 @@
+@import '../../style/variables/color';
+
+.button {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    cursor: pointer;
+    height: 50px;
+    &__icon{
+        margin-right: 10px;
+    }
+    &_button-with-icon {
+        padding: 13px 20px;
+        border: 2px solid #FFFFFF;
+        color: #FFFFFF;
+        background: none;
+        &:hover {
+            color: $Lime;
+            border: 2px solid $Lime;
+        }
+    }
+    &_button-long {
+        padding: 15px 90px;
+        border-radius: 4px;
+        background-color: #fff;
+        border: none;
+        &:hover {
+            background-color: $Light_gray;
+        }
+    }
+    &_button-up {
+        width: 64px;
+        height: 64px;
+        background-color: $Bright_Violet;
+        border-radius: 10px;
+        border: none;
+        &:hover {
+            background-color: $Lime;
+        }
+    }
+}

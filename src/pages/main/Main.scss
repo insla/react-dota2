@@ -8,6 +8,11 @@
         top: 0;
         position: absolute;
     }
+    &__button-authorization {
+        position: absolute;
+        right: 40px;
+        top: 40px;
+    }
     &__logo-and-search {
         display: flex;
         flex-direction: column;
