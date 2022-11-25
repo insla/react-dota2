@@ -9,12 +9,14 @@ const Teams = lazy(() => import('../../pages/teams/Teams'));
 function App() {
   return (
     <Router>
-      <Routes>
-        <Route path="/" element={<Main/>}/>
-        <Route element={<Layout/>}>
-          <Route path="/teams" element={<Teams/>}/>
-        </Route>
-      </Routes>
+      <div className="app">
+        <Routes>
+          <Route path="/" element={<Main/>}/>
+          <Route element={<Layout/>}>
+            <Route path="/teams" element={<Teams/>}/>
+          </Route>
+        </Routes>
+      </div>
     </Router>
   );
 }

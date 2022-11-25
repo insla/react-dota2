@@ -5,23 +5,91 @@
     background-color: $Dark_violet;
     background-position: top -80px right 0;
     background-repeat: no-repeat;
+    padding: 48px 0 50px;
 }
 
 .table {
+    margin: 50px auto;
     width: 100%;
-    border: 3px solid $Violet;
-    color: black;
+    border:  3px solid $Violet;
+    border-collapse: collapse;
+    tr {
+        border-bottom: 3px solid $Violet;
+
+
+    }
+    &__head {
+        height: 60px;
+        text-align: left;
+        background-color: $Violet;
+        border: 3px solid $Violet;
+        color: #fff;
+        tr {
+            th:first-child {
+                padding-left: 40px;
+            }
+        }
+    }
+    &__body {
+        tr td {
+            padding: 20px 0;
+        }
+        tr:nth-child(odd) {
+            background-color: rgba(16, 0, 37, 0.15);
+        }
+        tr:nth-child(even) {
+            background-color: rgba(16, 0, 37, 0.25);
+        }
+        tr td:first-child{
+            padding-left: 40px;
+        }
+        tr td:last-child{
+            padding-right: 40px;
+        }
+        border: 3px solid $Violet;
+        color: $Brightest_Violet;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 19px;
+    }
     &__team-table{
+        display: flex;
+        align-items: center;
+        gap: 10px;
         span {
             color: red;
         }
     }
-    &__head {
-        background-color: $Violet;
-        border: 3px solid $Violet;
+    &__name-team {
+        span {
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 29px;
+            color: $Lime;
+        }
     }
-    &__body {
-        border: 3px solid $Violet;
-
+    &__icon-table {
+        img {
+            height: 40px;
+        }
+    }
+    &__wrapper-rating {
+        position: relative;
+        margin-top: 10px;
+    }
+    &__rating-scale {
+        width: 102.4px;
+        height: 4px;
+        background-color: $Lime;
+        border-radius: 4px;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    &__rating-fon {
+        width: 128px;
+        height: 4px;
+        background-color: $Shade_violet;
+        border-radius: 4px;
     }
 }

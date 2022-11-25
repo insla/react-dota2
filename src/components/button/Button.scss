@@ -9,6 +9,7 @@
     line-height: 19px;
     cursor: pointer;
     height: 50px;
+    margin: 0 auto;
     &__icon{
         margin-right: 10px;
     }
@@ -28,7 +29,7 @@
         background-color: #fff;
         border: none;
         &:hover {
-            background-color: $Light_gray;
+            background-color: $Gray;
         }
     }
     &_button-up {
@@ -39,6 +40,15 @@
         border: none;
         &:hover {
             background-color: $Lime;
+        }
+    }
+    &_button-small {
+        padding: 15.5px 20px;
+        border-radius: 4px;
+        background-color: #fff;
+        border: none;
+        &:hover {
+            background-color: $Gray;
         }
     }
 }
