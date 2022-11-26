@@ -1,0 +1,46 @@
+@import '../../style/variables/color';
+
+.table {
+    margin: 50px auto;
+    width: 100%;
+    border:  3px solid $Violet;
+    border-collapse: collapse;
+    tr {
+        border-bottom: 3px solid $Violet;
+    }
+    &__head {
+        height: 60px;
+        text-align: left;
+        background-color: $Violet;
+        border: 3px solid $Violet;
+        color: #fff;
+        tr {
+            text-transform: uppercase;
+            th:first-child {
+                padding-left: 40px;
+            }
+        }
+    }
+    &__body {
+        tr td {
+            padding: 20px 0;
+        }
+        tr:nth-child(odd) {
+            background-color: rgba(16, 0, 37, 0.15);
+        }
+        tr:nth-child(even) {
+            background-color: rgba(16, 0, 37, 0.25);
+        }
+        tr td:first-child{
+            padding-left: 40px;
+        }
+        tr td:last-child{
+            padding-right: 40px;
+        }
+        border: 3px solid $Violet;
+        color: $Brightest_Violet;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 19px;
+    }
+}

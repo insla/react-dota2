@@ -13,8 +13,20 @@
     &__icon{
         margin-right: 10px;
     }
-    &_button-with-icon {
+    &_with-icon {
         padding: 13px 20px;
+    }
+    &_long {
+        padding: 15px 90px;
+    }
+    &_up {
+        width: 64px;
+        height: 64px;
+    }
+    &_small {
+        padding: 15.5px 20px;
+    }
+    &_bg-none {
         border: 2px solid #FFFFFF;
         color: #FFFFFF;
         background: none;
@@ -23,8 +35,7 @@
             border: 2px solid $Lime;
         }
     }
-    &_button-long {
-        padding: 15px 90px;
+    &_bg-white {
         border-radius: 4px;
         background-color: #fff;
         border: none;
@@ -32,23 +43,12 @@
             background-color: $Gray;
         }
     }
-    &_button-up {
-        width: 64px;
-        height: 64px;
+    &_bg-bright-violet {
         background-color: $Bright_Violet;
         border-radius: 10px;
         border: none;
         &:hover {
             background-color: $Lime;
-        }
-    }
-    &_button-small {
-        padding: 15.5px 20px;
-        border-radius: 4px;
-        background-color: #fff;
-        border: none;
-        &:hover {
-            background-color: $Gray;
         }
     }
 }

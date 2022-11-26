@@ -1,16 +1,17 @@
 import Button from '../../components/button/Button';
-import TableTeams from './tableTeams/TableTeams';
+import TableMatches from './tableMatches/TableMatches';
 
-const Teams = () => {
+const Matches = () => {
     return (
-        <section className='teams'>
+        <section className='matches'>
             <div className="container">
                 <h2 className='title'>СПИСОК КОМАНД</h2>
-                <TableTeams/>
+                <TableMatches/>
                 <Button className='button_small button_bg-white'>Загрузить еще</Button>
             </div>
         </section>
+
     )
 }
 
-export default Teams;
+export default Matches;

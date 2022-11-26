@@ -1,26 +1,12 @@
 @import '../style/libs/reset';
 @import '../style/libs/title';
+@import '../style/libs/table';
 
 * {
     font-family: 'Inter', sans-serif;
 }
 
-// .app {
-//     position: relative;
-// }
-
 .container{
     max-width: 1200px;
     margin: 0 auto;
 }
-
-// .app {
-//     min-height: 100vh;
-//     display: grid;
-//     grid-template-rows: auto 1fr auto;
-//     gap: 3rem;
-// }
-
-// .main {
-//     height: 100vh;
-// }

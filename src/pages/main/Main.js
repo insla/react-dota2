@@ -25,7 +25,7 @@ const Main = () => {
 
                         <div className="start-page__button-authorization">
                             <Button 
-                                className={'button_button-with-icon'} 
+                                className='button_with-icon button_bg-none' 
                                 onMouseEnter = {() => setLogin(false)} 
                                 onMouseLeave = {() => setLogin(true)}>
                                 <div className='button__icon'>
@@ -50,12 +50,12 @@ const Main = () => {
                                 </div>
 
                                 <div className="start-page__wrapper-button">
-                                    <Link>
-                                        <Button className='button_button-long'>Список матчей</Button>
+                                    <Link to='/matches'>
+                                        <Button className='button_long button_bg-white'>Список матчей</Button>
                                     </Link>
 
                                     <Link to='/teams'>
-                                        <Button className='button_button-long'>Список команд</Button>
+                                        <Button className='button_long button_bg-white'>Список команд</Button>
                                     </Link>
                                 </div>
                             </div>

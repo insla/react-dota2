@@ -22,3 +22,11 @@
         }
     }
 }
+
+.main {
+    background-image:url('../../resources/img/main-img.png');
+    background-color: $Dark_violet;
+    background-position: top -80px right 0;
+    background-repeat: no-repeat;
+    padding: 48px 0 50px;
+}

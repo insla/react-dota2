@@ -1,0 +1,44 @@
+@import '../../../style/variables/color';
+
+.table {
+    &__team-table{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        span {
+            color: red;
+        }
+    }
+    &__name-team {
+        span {
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 29px;
+            color: $Lime;
+        }
+    }
+    &__icon-table {
+        img {
+            height: 40px;
+        }
+    }
+    &__wrapper-rating {
+        position: relative;
+        margin-top: 10px;
+    }
+    &__rating-scale {
+        width: 102.4px;
+        height: 4px;
+        background-color: $Lime;
+        border-radius: 4px;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    &__rating-fon {
+        width: 128px;
+        height: 4px;
+        background-color: $Shade_violet;
+        border-radius: 4px;
+    }
+}
