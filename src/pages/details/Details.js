@@ -64,11 +64,21 @@ const Details = () => {
 
                 </div>
                     
-                <div className='details__table-lose'>
+                <div className='details__table-info'>
+                    <div className='details__table-header'>
+                        <p>Radiant</p>
+                        <p>стастистика комманды</p>
+                        <span className='details__table-lose'>Проигравшие</span>
+                    </div>
                     <TableDetails/>
                 </div>
 
-                <div className='details__table-wins'>
+                <div className='details__table-info'>
+                    <div className='details__table-header'>
+                        <p>Dire</p>
+                        <p>стастистика комманды</p>
+                        <span className='details__table-win'>Победители</span>
+                    </div>
                     <TableDetails/>
                 </div>
     

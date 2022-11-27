@@ -1,0 +1,21 @@
+@import '../../../style/variables/color';
+
+.table {
+    &__name {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        p {
+            color: $Lime;
+        }
+    }
+    &__text-lime {
+        color: $Lime;
+    }
+    &__text-orange {
+        color: $Orange;
+    }
+    &__text-yellow {
+        color: $Yellow;
+    }
+}

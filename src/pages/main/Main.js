@@ -14,7 +14,7 @@ import FixButton from '../../components/fixButton/FixButton';
 import Footer from '../../components/footer/Footer';
 
 const Main = () => {
-    const [login, setLogin] = useState(true)
+    const [iconLogin, setIconLogin] = useState(true)
 
     return (
         <>
@@ -26,11 +26,11 @@ const Main = () => {
                         <div className="start-page__button-authorization">
                             <Button 
                                 className='button_with-icon button_bg-none' 
-                                onMouseEnter = {() => setLogin(false)} 
-                                onMouseLeave = {() => setLogin(true)}>
+                                onMouseEnter = {() => setIconLogin(false)} 
+                                onMouseLeave = {() => setIconLogin(true)}>
                                 <div className='button__icon'>
                                     <img 
-                                        src={login ? iconPerson : iconPersonGreen}
+                                        src={iconLogin ? iconPerson : iconPersonGreen}
                                         alt="person"
                                     />
                                 </div>
