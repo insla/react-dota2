@@ -1,0 +1,33 @@
+@import '../../style/variables/color';
+
+.modal-authorization {
+    &__input {
+        position: relative;
+        margin-bottom: 36px;
+        p {
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 19px;
+        }
+    }    
+    &__registration-password {
+        margin-top: 25px;
+        display: flex;
+        gap: 20px;
+        & > p {
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 19px;
+            color: $Gray;
+        }
+    }
+    &__registration {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 19px;
+        cursor: pointer;
+    }
+}

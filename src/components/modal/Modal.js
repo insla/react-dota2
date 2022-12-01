@@ -5,7 +5,7 @@ const Modal = ({children, title}) => {
         <div className='modal'>
             <div className='modal__content'>
                 <p className='modal__close'>✕</p>
-                <h2 className='modal__title'>Авторизация</h2>
+                <h2 className='modal__title'>Регистрация</h2>
                 {children}
             </div>
         </div>

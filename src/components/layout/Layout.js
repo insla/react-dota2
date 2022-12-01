@@ -5,6 +5,7 @@ import SideMenu from '../sideMenu/SideMenu';
 import { useState } from 'react';
 import Modal from '../modal/Modal';
 import ModalAuthorization from '../modalAuthorization/ModalAuthorization';    
+import ModalRegistration from '../modalRegistration/ModalRegistration';
 
 const Layout = () => {
     const [sideMenuActive, setSideMenuActive] = useState(false);
@@ -20,7 +21,7 @@ const Layout = () => {
                     <Outlet/>
                 </main>
                 <Modal>
-                    <ModalAuthorization/>
+                    <ModalRegistration/>
                 </Modal>
                 <SideMenu state={sideMenuActive} changeState={changeState}/>
             <Footer/>

@@ -22,12 +22,21 @@
     &_up {
         width: 64px;
         height: 64px;
+        background-color: $Bright_Violet;
+        border-radius: 10px;
+        border: none;
+        &:hover {
+            background-color: $Lime;
+        }
     }
     &_small {
         padding: 15.5px 20px;
     }
     &_full-parent {
         width: 100%;
+    }
+    &_modal {
+        padding: 15.5px 40px;
     }
     &_bg-none {
         border: 2px solid #FFFFFF;
@@ -48,8 +57,9 @@
     }
     &_bg-bright-violet {
         background-color: $Bright_Violet;
-        border-radius: 10px;
+        border-radius: 4px;
         border: none;
+        color: #fff;
         &:hover {
             background-color: $Lime;
         }
