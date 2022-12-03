@@ -1,6 +1,7 @@
 import './SideMenu.scss';
 import logoIcon from '../../resources/icons/Logo-mini.png';
 import arrowRightIcon from '../../resources/icons/arrow-right.png';
+import arrowRightIconWhite from '../../resources/icons/arrow-right-white.png';
 import personIcon from '../../resources/icons/person.png';
 import personIconGreen from '../../resources/icons/person-green.png';
 import searchIcon from '../../resources/icons/search.png';
@@ -10,6 +11,8 @@ import { useState } from 'react';
 
 const SideMenu = ({state, changeState}) => {
     const [iconLogin, setIconLogin] = useState(true);
+    const [iconBlackTeams, setIconBlackTeams] = useState(false)
+    const [iconBlackMatches, setIconBlackMatches] = useState(false)
 
     return (
         <aside className={state ? 'side-menu side-menu_active' : 'side-menu'}>
@@ -19,20 +22,26 @@ const SideMenu = ({state, changeState}) => {
                 <img src={logoIcon} alt="logo" />
             </div>
             <div className='side-menu__search'>
-                <input type="sarch" placeholder="Найти профиль"/>
-                <img src={searchIcon} alt="search" />
-                <div className='side-menu__line'></div>
+                <input className='input input_main-page' type="sarch" placeholder="Найти профиль"/>
+                <div className='input__line'></div>
+                <img className='input__img input__img_side-menu' src={searchIcon} alt="search" />
             </div>
             <div className='side-menu__link'>
-                <Link to='/matches'>
-                    <p>Список матчей</p>
-                    <img src={arrowRightIcon} alt="arrowRight" />
+                <Link 
+                    to='/matches'
+                    onMouseLeave={() => setIconBlackMatches(false)}
+                    onMouseEnter={() => setIconBlackMatches(true)}>
+                        <p>Список матчей</p>
+                        <img src={iconBlackMatches ? arrowRightIcon : arrowRightIconWhite} alt="arrowRight" />
                 </Link>
             </div>
             <div className='side-menu__link'>
-                <Link to='/teams'>
-                    <p>Список команд</p>
-                    <img src={arrowRightIcon} alt="arrowRight" />
+                <Link 
+                    to='/teams'
+                    onMouseLeave={() => setIconBlackTeams(false)}
+                    onMouseEnter={() => setIconBlackTeams(true)}>
+                        <p>Список команд</p>
+                        <img src={iconBlackTeams ? arrowRightIcon : arrowRightIconWhite} alt="arrowRight" />
                 </Link>
             </div>
             <div className='side-menu__button'>

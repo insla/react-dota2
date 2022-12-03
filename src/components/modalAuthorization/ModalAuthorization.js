@@ -2,6 +2,7 @@ import './ModalAuthorization.scss';
 import Button from '../button/Button';
 import arrowRightIcon from '../../resources/icons/arrow-right.png';
 import eyeIcon from '../../resources/icons/eye.png';
+import arrowRightGreen from '../../resources/icons/arrow-right-green.png';
 import { useState } from 'react';
 import { Formik, Form} from 'formik';
 import * as Yup from 'yup';
@@ -9,6 +10,8 @@ import Input from '../input/Input';
 
 const ModalAuthorization = () => {
     const [showPassword, setShowPassword] = useState();
+    const [iconGreenRegistration, setIconGreenRegistration] = useState(false)
+    const [iconGreenRecover, setIconGreenRecover] = useState(false)
 
     return (
         <div className='modal-authorization'>
@@ -63,16 +66,22 @@ const ModalAuthorization = () => {
             
             <div className='modal-authorization__registration-password'>
                 <p>Нет учетной записи?</p>
-                <div className='modal-authorization__registration'>
+                <div 
+                    className='modal-authorization__registration'
+                    onMouseLeave={() => setIconGreenRegistration(false)}
+                    onMouseEnter={() => setIconGreenRegistration(true)}>
                     <p>Регистрация</p>
-                    <img src={arrowRightIcon} alt="arrowRightIcon" />
+                    <img src={iconGreenRegistration ? arrowRightGreen : arrowRightIcon} alt="arrowRightIcon" />
                 </div>
             </div>
             <div className='modal-authorization__registration-password'>
                 <p>Забыли пароль?</p>
-                <div className='modal-authorization__registration'>
+                <div 
+                    className='modal-authorization__registration'
+                    onMouseLeave={() => setIconGreenRecover(false)}
+                    onMouseEnter={() => setIconGreenRecover(true)}>
                     <p>Восстановить пароль</p>
-                    <img src={arrowRightIcon} alt="arrowRightIcon" />
+                    <img src={iconGreenRecover ? arrowRightGreen : arrowRightIcon} alt="arrowRightIcon" />
                 </div>
             </div>
         </div>
@@ -80,34 +89,3 @@ const ModalAuthorization = () => {
 }
 
 export default ModalAuthorization;
-
-{/* <div className='modal-authorization'>
-<div className='modal-authorization__wrepper-input'>
-    <div className='modal-authorization__input'>
-        <p>Логин / E-mail</p>
-        <input type="text" />
-        <div className='modal-authorization__line'></div>
-    </div>
-    <div className='modal-authorization__input'>
-        <p>Пароль</p>
-        <input type={showPassword ? "text" :"password"} />
-        <div className='modal-authorization__line'></div>
-        <img onClick={() => setShowPassword(!showPassword)} src={eyeIcon} alt="eyeIcon" />
-    </div>
-    <Button className='button_modal button_bg-bright-violet'>Войти</Button>
-</div>
-<div className='modal-authorization__registration-password'>
-    <p>Нет учетной записи?</p>
-    <div className='modal-authorization__registration'>
-        <p>Регистрация</p>
-        <img src={arrowRightIcon} alt="arrowRightIcon" />
-    </div>
-</div>
-<div className='modal-authorization__registration-password'>
-    <p>Забыли пароль?</p>
-    <div className='modal-authorization__registration'>
-        <p>Восстановить пароль</p>
-        <img src={arrowRightIcon} alt="arrowRightIcon" />
-    </div>
-</div>
-</div> */}

@@ -5,7 +5,7 @@ const Input = ({...props}) => {
     const [field, meta] = useField(props)
     return (
         <>
-            <input className='input' {...props} {...field}/>
+            <input className='input input_modal' {...props} {...field}/>
             {meta.touched && meta.error ? (
                 <div className='input__error'>{meta.error}</div>
             ) : null}

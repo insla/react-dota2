@@ -44,9 +44,9 @@ const Main = () => {
 
                             <div className="start-page__wrapper-search">
                                 <div className="start-page__search">
-                                    <input type="sarch" placeholder="Поиск по сайту..."/>
-                                    <img src={iconSearch} alt="search"/>
-                                    <div></div>
+                                    <input className='input input_main-page' type="sarch" placeholder="Поиск по сайту..."/>
+                                    <div className='input__line'></div>
+                                    <img className='input__img input__img_main-page' src={iconSearch} alt="search"/>
                                 </div>
 
                                 <div className="start-page__wrapper-button">
