@@ -15,12 +15,13 @@
     &__input {
         position: relative;
         margin-top: 36px;
+        width: 250px;
     }
     &__label {
         position: relative;
         display: flex;
         justify-content: center;
-        margin: 40px 0;
+        margin: 60px 0 40px;
         width: 482px;
         input {
             position: absolute;

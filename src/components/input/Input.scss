@@ -19,21 +19,14 @@
         background-color: $Bright_Violet;
     }
     &__line {
-        position: absolute;
-        bottom: -1px;
-        left: 0;
-        width: 100%;
         height: 2px;
-        border: none;
         background-color: $Light_gray;
         border-radius: 10px;
     }
     &__error {
-        position: absolute;
-        bottom: -20px;
-        left: 0;
         font-size: 14px;
         color: $Orange;
+        float: left;
         + .input__line {
             background-color: $Orange;
         }
