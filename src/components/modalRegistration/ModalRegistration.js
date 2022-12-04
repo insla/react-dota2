@@ -1,5 +1,5 @@
 import './ModalRegistration.scss';
-import { Formik, Form, Field } from 'formik';
+import { Formik, Form, Field, ErrorMessage} from 'formik';
 import * as Yup from 'yup';
 import Button from '../button/Button';
 import Input from '../input/Input';
@@ -20,19 +20,22 @@ const ModalRegistration = () => {
                         .email('Неправильный email адрес!')
                         .required('Обязательное поле!'),
                     login: Yup.string()
-                        .min(2, 'Минимум 2 символа для заполнения!')
+                        .min(2, 'Минимум 2 символа!')
+                        .matches(/^[A-Za-z0-9]+$/, 'Латинские буквы и цифры!')
                         .required('Обязательное поле!'),
                     password: Yup.string()
-                        .required('Password is required'),
+                        .matches(/^(?=.*[A-Za-zА-ЯЁа-яё])(?=.*\d)[A-Za-zА-ЯЁа-яё\d]{8,}$/, 'Минимум восемь символов, одна буква и цифра!')
+                        .required('Обязательное поле!'),
                     checkPassword: Yup.string()
-                        .oneOf([Yup.ref('password'), null], 'Passwords must match'),
+                        .required('Повторите пароль!')
+                        .oneOf([Yup.ref('password'), null], 'Пароль не совпвдвет!'),
                     checkbox: Yup.boolean()
                         .required('Обязательное поле!')
                         .oneOf([true], 'Обязательное поле!')
                 })}  
                 onSubmit = {values => console.log(JSON.stringify(values, null, 2))}
                 >
-                <Form>
+                <Form noValidate>
                     <div className='modal-registration__wrepper-input'>
                         <div className='modal-registration__input-left'>
                             <div className='modal-registration__input'>
@@ -84,6 +87,7 @@ const ModalRegistration = () => {
                             name = 'checkbox'
                         />
                         <span>Соглашаетесь с политикой конфиденциальности?</span>
+                        <ErrorMessage className='modal-registration__error' name='checkbox' component='div'/>
                     </label>
                     <Button 
                         type = 'submit'

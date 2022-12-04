@@ -23,16 +23,17 @@ const ModalAuthorization = () => {
                 validationSchema = {Yup.object({
                     login: Yup.string()
                         .min(2, 'Минимум два символа!')
+                        .matches(/^[A-Za-z0-9]+$/, 'Латинские буквы и цифры!')
                         .required('Обязательное поле!'),
                     password: Yup.string()
-                        .min(8, 'Минимум восемь символов!')
+                        .matches(/^(?=.*[A-Za-zА-ЯЁа-яё])(?=.*\d)[A-Za-zА-ЯЁа-яё\d]{8,}$/, 'Минимум восемь символов, одна буква и цифра!')
                         .required('Обязательное поле!'), 
                 })}
                 onSubmit= {(value, {resetForm}) => {
                     console.log(JSON.stringify(value, null, 2))
                     resetForm({value: ''})
                 }}>
-                <Form className='modal-authorization__wrepper-input'>
+                <Form className='modal-authorization__wrepper-input' noValidate>
                     <div className='modal-authorization__input'>
                         <p>Логин / E-mail</p>
                         <Input 
